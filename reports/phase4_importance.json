@@ -1,0 +1,154 @@
+{
+  "ExtraTrees": {
+    "impurity_importance": {
+      "flow_rate_L_min": 0.05607369598396712,
+      "concentration_mol_L": 0.030104386721389424,
+      "inlet_temperature_K": 0.18842699082274636,
+      "length_m": 0.044687644186227594,
+      "jacket_temperature_K": 0.13933306140003404,
+      "avg_temp": 0.2952765137744626,
+      "residence_proxy": 0.0667218398773179,
+      "residence_sq": 0.04488213165956924,
+      "delta_T": 0.061636145477776016,
+      "severity_index": 0.07285759009650972
+    },
+    "permutation_importance_mean": {
+      "flow_rate_L_min": 6.947181991547815,
+      "concentration_mol_L": 0.04290179031537598,
+      "inlet_temperature_K": 23.989498983602534,
+      "length_m": 5.637391352481556,
+      "jacket_temperature_K": 26.715262885267528
+    },
+    "permutation_importance_std": {
+      "flow_rate_L_min": 2.2224529491895746,
+      "concentration_mol_L": 0.3605643512388281,
+      "inlet_temperature_K": 4.305032747274782,
+      "length_m": 1.542747175923992,
+      "jacket_temperature_K": 4.193950740876492
+    },
+    "holdout_rmse_single_split": 16.568962997802096,
+    "shap_mean_abs": {
+      "flow_rate_L_min": 1.7678228918914876,
+      "concentration_mol_L": 0.6147240331244443,
+      "inlet_temperature_K": 8.841920641194479,
+      "length_m": 1.10334698303037,
+      "jacket_temperature_K": 6.735675502307466,
+      "avg_temp": 13.792087798499722,
+      "residence_proxy": 1.7776580986873867,
+      "residence_sq": 0.8598565212186972,
+      "delta_T": 1.5166788097716999,
+      "severity_index": 1.8314944244047218
+    }
+  },
+  "CatBoost": {
+    "impurity_importance": {
+      "flow_rate_L_min": 3.634120994933612,
+      "concentration_mol_L": 2.423576980773984,
+      "inlet_temperature_K": 20.079703941893886,
+      "length_m": 4.615676030539826,
+      "jacket_temperature_K": 12.211291183420643,
+      "avg_temp": 29.76399259212165,
+      "residence_proxy": 7.742783057063511,
+      "residence_sq": 6.633851846197477,
+      "delta_T": 6.447301443970164,
+      "severity_index": 6.447701929085226
+    },
+    "permutation_importance_mean": {
+      "flow_rate_L_min": 7.303885919238804,
+      "concentration_mol_L": 0.05560841222281878,
+      "inlet_temperature_K": 24.957992711524167,
+      "length_m": 7.253815091226959,
+      "jacket_temperature_K": 27.321664527834628
+    },
+    "permutation_importance_std": {
+      "flow_rate_L_min": 2.134016992400215,
+      "concentration_mol_L": 0.45387037282877296,
+      "inlet_temperature_K": 4.683598747795708,
+      "length_m": 1.8526330501478665,
+      "jacket_temperature_K": 3.95502754540288
+    },
+    "holdout_rmse_single_split": 16.02097375508451,
+    "shap_mean_abs": {
+      "flow_rate_L_min": 1.2560591712600937,
+      "concentration_mol_L": 0.8985865527725571,
+      "inlet_temperature_K": 9.813198923881746,
+      "length_m": 1.4499423319864633,
+      "jacket_temperature_K": 5.753750851734895,
+      "avg_temp": 13.268138488727732,
+      "residence_proxy": 2.4841316538724256,
+      "residence_sq": 2.34933311781814,
+      "delta_T": 1.814524582371329,
+      "severity_index": 2.132611518016986
+    }
+  },
+  "RandomForest": {
+    "impurity_importance": {
+      "flow_rate_L_min": 0.024965385959207283,
+      "concentration_mol_L": 0.02516061270894973,
+      "inlet_temperature_K": 0.18205574595603155,
+      "length_m": 0.023513782172659994,
+      "jacket_temperature_K": 0.04505156133755611,
+      "avg_temp": 0.48003945413695703,
+      "residence_proxy": 0.05693290030240134,
+      "residence_sq": 0.056145482105990956,
+      "delta_T": 0.04010039119955298,
+      "severity_index": 0.0660346841206929
+    },
+    "permutation_importance_mean": {
+      "flow_rate_L_min": 3.1661535923357476,
+      "concentration_mol_L": 0.23880531290809817,
+      "inlet_temperature_K": 22.94197222171311,
+      "length_m": 3.624235161426946,
+      "jacket_temperature_K": 26.670265719795612
+    },
+    "permutation_importance_std": {
+      "flow_rate_L_min": 1.4524286581791357,
+      "concentration_mol_L": 0.38129923641923813,
+      "inlet_temperature_K": 4.692132325909208,
+      "length_m": 1.7379275073578084,
+      "jacket_temperature_K": 4.30426857126038
+    },
+    "holdout_rmse_single_split": 17.296239750707215,
+    "shap_mean_abs": {
+      "flow_rate_L_min": 0.5624371289682275,
+      "concentration_mol_L": 0.5287372084783976,
+      "inlet_temperature_K": 9.701120108076877,
+      "length_m": 0.5650381119363335,
+      "jacket_temperature_K": 2.074673310267592,
+      "avg_temp": 20.203012072565276,
+      "residence_proxy": 1.7767395397740988,
+      "residence_sq": 1.8209712433539136,
+      "delta_T": 0.904125879159534,
+      "severity_index": 2.08313991641784
+    }
+  },
+  "Ridge": {
+    "permutation_importance_mean": {
+      "flow_rate_L_min": 1.698633630912883,
+      "concentration_mol_L": -0.4689644883038806,
+      "inlet_temperature_K": 6.177381246187066,
+      "length_m": 2.8720722948625133,
+      "jacket_temperature_K": 16.033157492018653
+    },
+    "permutation_importance_std": {
+      "flow_rate_L_min": 1.6462378090557626,
+      "concentration_mol_L": 0.33163839178565585,
+      "inlet_temperature_K": 3.076040300398213,
+      "length_m": 0.9613892656540078,
+      "jacket_temperature_K": 4.731938492094184
+    },
+    "holdout_rmse_single_split": 29.854547994545594,
+    "shap_mean_abs": {
+      "flow_rate_L_min": 4.6134087605075536,
+      "concentration_mol_L": 1.4973303509554396,
+      "inlet_temperature_K": 10.327946457521557,
+      "length_m": 3.738043702147119,
+      "jacket_temperature_K": 17.855028826512715,
+      "avg_temp": 1.6815305029664862,
+      "residence_proxy": 20.451558926412282,
+      "residence_sq": 28.096750363455264,
+      "delta_T": 7.789548672523752,
+      "severity_index": 5.960799457782146
+    }
+  }
+}

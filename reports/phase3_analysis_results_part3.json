@@ -1,0 +1,81 @@
+{
+  "main_pipeline_benchmark": [
+    {
+      "preprocessing_config": "raw",
+      "model": "Ridge",
+      "rmse_mean": 30.409497914372164,
+      "rmse_std": 2.7572756600828447
+    },
+    {
+      "preprocessing_config": "raw",
+      "model": "RandomForest",
+      "rmse_mean": 19.960289123055396,
+      "rmse_std": 3.219671610532137
+    },
+    {
+      "preprocessing_config": "raw",
+      "model": "CatBoost",
+      "rmse_mean": 17.93783972819244,
+      "rmse_std": 2.8318340820917003
+    },
+    {
+      "preprocessing_config": "scaled",
+      "model": "Ridge",
+      "rmse_mean": 30.607280351376517,
+      "rmse_std": 2.595739267141189
+    },
+    {
+      "preprocessing_config": "scaled",
+      "model": "RandomForest",
+      "rmse_mean": 19.958965713188686,
+      "rmse_std": 3.219774482138542
+    },
+    {
+      "preprocessing_config": "scaled",
+      "model": "CatBoost",
+      "rmse_mean": 17.93663502514114,
+      "rmse_std": 2.831608651109579
+    },
+    {
+      "preprocessing_config": "transformed",
+      "model": "Ridge",
+      "rmse_mean": 30.549547315149375,
+      "rmse_std": 3.147679592251109
+    },
+    {
+      "preprocessing_config": "transformed",
+      "model": "RandomForest",
+      "rmse_mean": 19.960388880083432,
+      "rmse_std": 3.2125070539150182
+    },
+    {
+      "preprocessing_config": "transformed",
+      "model": "CatBoost",
+      "rmse_mean": 17.937723631241617,
+      "rmse_std": 2.8319607836565757
+    },
+    {
+      "preprocessing_config": "scaled_plus_transformed",
+      "model": "Ridge",
+      "rmse_mean": 30.534813656363404,
+      "rmse_std": 3.138338653272873
+    },
+    {
+      "preprocessing_config": "scaled_plus_transformed",
+      "model": "RandomForest",
+      "rmse_mean": 19.959024398111044,
+      "rmse_std": 3.2126552396388877
+    },
+    {
+      "preprocessing_config": "scaled_plus_transformed",
+      "model": "CatBoost",
+      "rmse_mean": 17.936518927630388,
+      "rmse_std": 2.831735316916634
+    }
+  ],
+  "serialization_test": {
+    "path": "C:\\Users\\BIT\\reactor-yield-hackathon\\artifacts\\pipelines\\ridge_core_standard_v1.joblib",
+    "predictions_match": true,
+    "max_abs_diff": 0.0
+  }
+}

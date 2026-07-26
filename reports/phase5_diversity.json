@@ -1,0 +1,54 @@
+{
+  "prediction_corr": {
+    "ExtraTrees": {
+      "ExtraTrees": 1.0,
+      "CatBoost": 0.9844,
+      "RandomForest": 0.9818,
+      "GaussianProcess": 0.9437
+    },
+    "CatBoost": {
+      "ExtraTrees": 0.9844,
+      "CatBoost": 1.0,
+      "RandomForest": 0.9876,
+      "GaussianProcess": 0.9364
+    },
+    "RandomForest": {
+      "ExtraTrees": 0.9818,
+      "CatBoost": 0.9876,
+      "RandomForest": 1.0,
+      "GaussianProcess": 0.9225
+    },
+    "GaussianProcess": {
+      "ExtraTrees": 0.9437,
+      "CatBoost": 0.9364,
+      "RandomForest": 0.9225,
+      "GaussianProcess": 1.0
+    }
+  },
+  "error_corr": {
+    "ExtraTrees": {
+      "ExtraTrees": 1.0,
+      "CatBoost": 0.9502,
+      "RandomForest": 0.9615,
+      "GaussianProcess": 0.841
+    },
+    "CatBoost": {
+      "ExtraTrees": 0.9502,
+      "CatBoost": 1.0,
+      "RandomForest": 0.9726,
+      "GaussianProcess": 0.8207
+    },
+    "RandomForest": {
+      "ExtraTrees": 0.9615,
+      "CatBoost": 0.9726,
+      "RandomForest": 1.0,
+      "GaussianProcess": 0.8001
+    },
+    "GaussianProcess": {
+      "ExtraTrees": 0.841,
+      "CatBoost": 0.8207,
+      "RandomForest": 0.8001,
+      "GaussianProcess": 1.0
+    }
+  }
+}

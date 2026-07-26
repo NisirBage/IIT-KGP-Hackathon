@@ -1,0 +1,226 @@
+{
+  "steps": [
+    {
+      "step": "load_model",
+      "path": "C:\\Users\\BIT\\reactor-yield-hackathon\\artifacts\\tuned_pipelines\\FINAL_ENSEMBLE_blend_v1.joblib"
+    },
+    {
+      "step": "load_test_data",
+      "path": "C:\\Users\\BIT\\reactor-yield-hackathon\\data\\raw\\test_dataset.csv",
+      "n_rows": 50
+    },
+    {
+      "step": "validate_input_schema",
+      "passed": true
+    },
+    {
+      "step": "predict",
+      "n_predictions": 50
+    },
+    {
+      "step": "clip",
+      "n_values_changed_by_clip": 0
+    },
+    {
+      "step": "validate_predictions",
+      "passed": true
+    },
+    {
+      "step": "write_submission",
+      "path": "C:\\Users\\BIT\\reactor-yield-hackathon\\submission\\TeamName.csv"
+    },
+    {
+      "step": "validate_submission_file",
+      "passed": true
+    }
+  ],
+  "input_validation": {
+    "checks": [
+      {
+        "check": "no_missing_columns",
+        "passed": true,
+        "detail": "missing=[]"
+      },
+      {
+        "check": "no_unexpected_columns",
+        "passed": true,
+        "detail": "unexpected=[]"
+      },
+      {
+        "check": "column_order",
+        "passed": true,
+        "detail": "expected=['flow_rate_L_min', 'concentration_mol_L', 'inlet_temperature_K', 'length_m', 'jacket_temperature_K'] actual=['flow_rate_L_min', 'concentration_mol_L', 'inlet_temperature_K', 'length_m', 'jacket_temperature_K']"
+      },
+      {
+        "check": "dtype_flow_rate_L_min",
+        "passed": true,
+        "detail": "dtype=float64"
+      },
+      {
+        "check": "dtype_concentration_mol_L",
+        "passed": true,
+        "detail": "dtype=float64"
+      },
+      {
+        "check": "dtype_inlet_temperature_K",
+        "passed": true,
+        "detail": "dtype=float64"
+      },
+      {
+        "check": "dtype_length_m",
+        "passed": true,
+        "detail": "dtype=float64"
+      },
+      {
+        "check": "dtype_jacket_temperature_K",
+        "passed": true,
+        "detail": "dtype=float64"
+      },
+      {
+        "check": "no_missing_values",
+        "passed": true,
+        "detail": "n_missing_values=0"
+      },
+      {
+        "check": "no_duplicate_rows",
+        "passed": true,
+        "detail": "n_duplicate_rows=0"
+      },
+      {
+        "check": "row_count",
+        "passed": true,
+        "detail": "expected=50 actual=50"
+      }
+    ],
+    "passed": true
+  },
+  "prediction_validation": {
+    "checks": [
+      {
+        "check": "prediction_count",
+        "passed": true,
+        "detail": "expected=50 actual=50"
+      },
+      {
+        "check": "no_nan",
+        "passed": true,
+        "detail": "n_nan=0"
+      },
+      {
+        "check": "no_inf",
+        "passed": true,
+        "detail": "n_inf=0"
+      },
+      {
+        "check": "within_physical_bounds",
+        "passed": true,
+        "detail": "range=[0.0000,92.3464] expected=[0.0,100.0]"
+      },
+      {
+        "check": "duplicate_predictions_flag",
+        "passed": true,
+        "detail": "n_unique=30/50 (informational, not fatal)"
+      }
+    ],
+    "passed": true,
+    "summary_stats": {
+      "mean": 29.19787985242519,
+      "std": 32.329078844223375,
+      "min": 0.0,
+      "max": 92.34639466513578,
+      "median": 14.859132032096367,
+      "n_at_lower_bound": 21,
+      "n_at_upper_bound": 0
+    }
+  },
+  "submission_validation": {
+    "checks": [
+      {
+        "check": "utf8_encoding",
+        "passed": true,
+        "detail": "decodable as UTF-8"
+      },
+      {
+        "check": "row_count",
+        "passed": true,
+        "detail": "expected=50 actual=50"
+      },
+      {
+        "check": "column_count",
+        "passed": true,
+        "detail": "expected=1 actual=1"
+      },
+      {
+        "check": "header_name",
+        "passed": true,
+        "detail": "expected=['overall_yield'] actual=['overall_yield']"
+      },
+      {
+        "check": "no_index_column",
+        "passed": true,
+        "detail": "first_column='overall_yield'"
+      },
+      {
+        "check": "float_values",
+        "passed": true,
+        "detail": "dtype=float64"
+      }
+    ],
+    "passed": true
+  },
+  "output_path": "C:\\Users\\BIT\\reactor-yield-hackathon\\submission\\TeamName.csv",
+  "output_sha256": "547521f4b9a249a6650927164433ca6d5e27f5a8684297fa69897a499d1c1c94",
+  "predictions": [
+    24.688716839260593,
+    82.5888213448823,
+    33.35225003696623,
+    88.79557224680966,
+    0.0,
+    69.0399352702578,
+    77.01033490291336,
+    74.16447400341971,
+    0.024259966903513508,
+    40.93957644888124,
+    0.0,
+    0.0,
+    0.0,
+    62.379363291409675,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    59.3048907236891,
+    0.0,
+    0.0,
+    92.34639466513578,
+    36.424562444579,
+    20.643735728216107,
+    69.38801560947041,
+    17.15490115388367,
+    84.2260858335854,
+    0.0,
+    75.60992674018532,
+    69.15103165472597,
+    47.840994723290045,
+    0.0,
+    9.941539072603184,
+    12.563362910309063,
+    10.38352595356439,
+    58.27218557201912,
+    0.0,
+    59.06386374214088,
+    0.0,
+    22.028594856132436,
+    0.0,
+    0.0,
+    49.826776753160914,
+    82.17632195124466,
+    0.0,
+    0.0,
+    30.56397818162007,
+    0.0
+  ],
+  "all_passed": true
+}

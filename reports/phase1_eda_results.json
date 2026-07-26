@@ -1,0 +1,599 @@
+{
+  "passport": {
+    "train": {
+      "name": "train_dataset.csv",
+      "n_samples": 150,
+      "n_features": 5,
+      "columns": [
+        "flow_rate_L_min",
+        "concentration_mol_L",
+        "inlet_temperature_K",
+        "length_m",
+        "jacket_temperature_K",
+        "overall_yield"
+      ],
+      "dtypes": {
+        "flow_rate_L_min": "float64",
+        "concentration_mol_L": "float64",
+        "inlet_temperature_K": "float64",
+        "length_m": "float64",
+        "jacket_temperature_K": "float64",
+        "overall_yield": "float64"
+      },
+      "memory_usage_bytes": 7332,
+      "ranges": {
+        "flow_rate_L_min": [
+          5.41,
+          79.02
+        ],
+        "concentration_mol_L": [
+          0.52,
+          3.97
+        ],
+        "inlet_temperature_K": [
+          351.63,
+          498.58
+        ],
+        "length_m": [
+          2.26,
+          24.99
+        ],
+        "jacket_temperature_K": [
+          354.01,
+          547.99
+        ],
+        "overall_yield": [
+          0.0,
+          99.971
+        ]
+      },
+      "n_unique": {
+        "flow_rate_L_min": 149,
+        "concentration_mol_L": 121,
+        "inlet_temperature_K": 150,
+        "length_m": 145,
+        "jacket_temperature_K": 149,
+        "overall_yield": 114
+      },
+      "constant_columns": [],
+      "duplicated_rows": 0,
+      "duplicated_feature_vectors": 0,
+      "decimal_places": {
+        "flow_rate_L_min": 2,
+        "concentration_mol_L": 2,
+        "inlet_temperature_K": 2,
+        "length_m": 2,
+        "jacket_temperature_K": 2,
+        "overall_yield": 3
+      },
+      "pct_zero": {
+        "flow_rate_L_min": 0.0,
+        "concentration_mol_L": 0.0,
+        "inlet_temperature_K": 0.0,
+        "length_m": 0.0,
+        "jacket_temperature_K": 0.0,
+        "overall_yield": 24.666666666666668
+      },
+      "duplicated_targets": 36,
+      "target_out_of_range_0_100": 0,
+      "suspicious_values": []
+    },
+    "test": {
+      "name": "test_dataset.csv",
+      "n_samples": 50,
+      "n_features": 5,
+      "columns": [
+        "flow_rate_L_min",
+        "concentration_mol_L",
+        "inlet_temperature_K",
+        "length_m",
+        "jacket_temperature_K"
+      ],
+      "dtypes": {
+        "flow_rate_L_min": "float64",
+        "concentration_mol_L": "float64",
+        "inlet_temperature_K": "float64",
+        "length_m": "float64",
+        "jacket_temperature_K": "float64"
+      },
+      "memory_usage_bytes": 2132,
+      "ranges": {
+        "flow_rate_L_min": [
+          7.14,
+          79.57
+        ],
+        "concentration_mol_L": [
+          0.55,
+          3.91
+        ],
+        "inlet_temperature_K": [
+          353.5,
+          498.1
+        ],
+        "length_m": [
+          2.03,
+          24.83
+        ],
+        "jacket_temperature_K": [
+          352.32,
+          546.53
+        ]
+      },
+      "n_unique": {
+        "flow_rate_L_min": 49,
+        "concentration_mol_L": 48,
+        "inlet_temperature_K": 50,
+        "length_m": 50,
+        "jacket_temperature_K": 50
+      },
+      "constant_columns": [],
+      "duplicated_rows": 0,
+      "duplicated_feature_vectors": 0,
+      "decimal_places": {
+        "flow_rate_L_min": 2,
+        "concentration_mol_L": 2,
+        "inlet_temperature_K": 2,
+        "length_m": 2,
+        "jacket_temperature_K": 2
+      },
+      "pct_zero": {
+        "flow_rate_L_min": 0.0,
+        "concentration_mol_L": 0.0,
+        "inlet_temperature_K": 0.0,
+        "length_m": 0.0,
+        "jacket_temperature_K": 0.0
+      },
+      "suspicious_values": []
+    }
+  },
+  "zero_yield": {
+    "n_total": 150,
+    "exact_zero": 37,
+    "pct_exact_zero": 24.67,
+    "nonzero_lt_0.001": 0,
+    "nonzero_lt_0.01": 0,
+    "nonzero_lt_0.1": 3,
+    "nonzero_lt_1.0": 20,
+    "smallest_nonzero_value": 0.013,
+    "gmm_bic_full_target": {
+      "1": 1529.3309174675412,
+      "2": 1134.9858939425778,
+      "3": 1108.1176996004876
+    },
+    "gmm_bic_nonzero_only": {
+      "1": 1146.8471041713774,
+      "2": 1102.4282733478178,
+      "3": 1014.4290132403021
+    }
+  },
+  "train_test_comparison": [
+    {
+      "feature": "flow_rate_L_min",
+      "train_mean": 40.4668,
+      "test_mean": 43.7244,
+      "train_std": 22.239771808495693,
+      "test_std": 21.887282036351053,
+      "ks_stat": 0.14,
+      "ks_p": 0.4363535753309122,
+      "wasserstein": 3.349466666666666,
+      "psi": 0.22969885140667498
+    },
+    {
+      "feature": "concentration_mol_L",
+      "train_mean": 2.3113333333333337,
+      "test_mean": 2.1561999999999997,
+      "train_std": 1.0198444852276336,
+      "test_std": 0.9701123225520574,
+      "ks_stat": 0.14,
+      "ks_p": 0.4363535753309122,
+      "wasserstein": 0.16966666666666666,
+      "psi": 0.2240093945381586
+    },
+    {
+      "feature": "inlet_temperature_K",
+      "train_mean": 424.42339999999996,
+      "test_mean": 428.3224000000001,
+      "train_std": 45.200641377970136,
+      "test_std": 42.488924009795824,
+      "ks_stat": 0.12666666666666668,
+      "ks_p": 0.5646995243143114,
+      "wasserstein": 5.850866666666663,
+      "psi": 0.2360121507484402
+    },
+    {
+      "feature": "length_m",
+      "train_mean": 14.086533333333334,
+      "test_mean": 14.365200000000002,
+      "train_std": 6.995343032559357,
+      "test_std": 6.93780158086913,
+      "ks_stat": 0.08666666666666667,
+      "ks_p": 0.931060355335815,
+      "wasserstein": 0.6559999999999998,
+      "psi": 0.33672175743030763
+    },
+    {
+      "feature": "jacket_temperature_K",
+      "train_mean": 442.2408,
+      "test_mean": 452.63039999999995,
+      "train_std": 55.047768182788666,
+      "test_std": 54.562280533163126,
+      "ks_stat": 0.15333333333333332,
+      "ks_p": 0.3258202386002529,
+      "wasserstein": 10.987866666666665,
+      "psi": 0.16475415772337274
+    }
+  ],
+  "zero_vs_nonzero_group_stats": [
+    {
+      "feature": "flow_rate_L_min",
+      "mean_zero_group": 30.120810810810806,
+      "mean_nonzero_group": 43.85442477876106,
+      "welch_t": -3.5982487161572063,
+      "welch_p": 0.0005985367419715569,
+      "mannwhitney_u": 1332.5,
+      "mannwhitney_p": 0.0009582120943795265,
+      "cohens_d": -0.6386501799646012,
+      "cliffs_delta": -0.362592681176752,
+      "mean_diff_ci95": [
+        -21.044965797656065,
+        -6.0050397632145405
+      ]
+    },
+    {
+      "feature": "concentration_mol_L",
+      "mean_zero_group": 2.150810810810811,
+      "mean_nonzero_group": 2.3638938053097345,
+      "welch_t": -1.1915863508703384,
+      "welch_p": 0.23742018398515366,
+      "mannwhitney_u": 1809.0,
+      "mannwhitney_p": 0.22052653758711638,
+      "cohens_d": -0.20908995137809752,
+      "cliffs_delta": -0.13465678067447978,
+      "mean_diff_ci95": [
+        -0.5555839512078449,
+        0.15544331499641204
+      ]
+    },
+    {
+      "feature": "inlet_temperature_K",
+      "mean_zero_group": 439.0091891891892,
+      "mean_nonzero_group": 419.6475221238938,
+      "welch_t": 2.3303508922734784,
+      "welch_p": 0.02300341119811837,
+      "mannwhitney_u": 2595.0,
+      "mannwhitney_p": 0.027997855421754144,
+      "cohens_d": 0.4344303655804,
+      "cliffs_delta": 0.24132982540062187,
+      "mean_diff_ci95": [
+        3.200031690983137,
+        35.27420031093042
+      ]
+    },
+    {
+      "feature": "length_m",
+      "mean_zero_group": 15.808918918918918,
+      "mean_nonzero_group": 13.522566371681416,
+      "welch_t": 2.027813408760218,
+      "welch_p": 0.045774814902482364,
+      "mannwhitney_u": 2455.0,
+      "mannwhitney_p": 0.11252220155190074,
+      "cohens_d": 0.32904493182753297,
+      "cliffs_delta": 0.17436020090887347,
+      "mean_diff_ci95": [
+        0.05575352786414386,
+        4.461299928246829
+      ]
+    },
+    {
+      "feature": "jacket_temperature_K",
+      "mean_zero_group": 499.2321621621622,
+      "mean_nonzero_group": 423.5799115044248,
+      "welch_t": 10.391944231501409,
+      "welch_p": 1.3633078032903943e-16,
+      "mannwhitney_u": 3705.5,
+      "mannwhitney_p": 1.938601568252307e-12,
+      "cohens_d": 1.7032358446538256,
+      "cliffs_delta": 0.7725424539583832,
+      "mean_diff_ci95": [
+        61.25818010045443,
+        89.44316425496282
+      ]
+    },
+    {
+      "feature": "residence_proxy",
+      "mean_zero_group": 0.7577393607477564,
+      "mean_nonzero_group": 0.5051408508360844,
+      "welch_t": 2.531194970490749,
+      "welch_p": 0.013259243487422731,
+      "mannwhitney_u": 2997.0,
+      "mannwhitney_p": 7.817148556961595e-05,
+      "cohens_d": 0.4118852885686574,
+      "cliffs_delta": 0.4336283185840708,
+      "mean_diff_ci95": [
+        0.05155922715646478,
+        0.43944376822275616
+      ]
+    },
+    {
+      "feature": "delta_T_jacket_inlet",
+      "mean_zero_group": 60.222972972972975,
+      "mean_nonzero_group": 3.932389380530973,
+      "welch_t": 4.929773725786047,
+      "welch_p": 4.933779333714573e-06,
+      "mannwhitney_u": 3074.0,
+      "mannwhitney_p": 1.8221469113369295e-05,
+      "cohens_d": 0.8465321571830521,
+      "cliffs_delta": 0.4704616120545324,
+      "mean_diff_ci95": [
+        33.970939906720886,
+        78.15587263812486
+      ]
+    },
+    {
+      "feature": "avg_temp",
+      "mean_zero_group": 469.12067567567567,
+      "mean_nonzero_group": 421.6137168141593,
+      "welch_t": 8.911646371656717,
+      "welch_p": 5.5749258385875e-13,
+      "mannwhitney_u": 3649.0,
+      "mannwhitney_p": 1.1020834745645369e-11,
+      "cohens_d": 1.6067972267976816,
+      "cliffs_delta": 0.7455154269313561,
+      "mean_diff_ci95": [
+        37.11720162640506,
+        57.54317615403011
+      ]
+    },
+    {
+      "feature": "severity_index",
+      "mean_zero_group": 49.44772516917056,
+      "mean_nonzero_group": -4.514242879359178,
+      "welch_t": 5.175817118832657,
+      "welch_p": 5.2418359835792885e-06,
+      "mannwhitney_u": 3306.0,
+      "mannwhitney_p": 1.1765491942597282e-07,
+      "cohens_d": 1.26101697128397,
+      "cliffs_delta": 0.5814398469265726,
+      "mean_diff_ci95": [
+        34.65535881195547,
+        74.65987579985295
+      ]
+    },
+    {
+      "feature": "inv_inlet_temp",
+      "mean_zero_group": 0.002301580207484664,
+      "mean_nonzero_group": 0.0024102160467035358,
+      "welch_t": -2.295572816900949,
+      "welch_p": 0.02500144443693638,
+      "mannwhitney_u": 1586.0,
+      "mannwhitney_p": 0.027997855421754144,
+      "cohens_d": -0.42516395595214,
+      "cliffs_delta": -0.24132982540062187,
+      "mean_diff_ci95": [
+        -0.00019828162781727952,
+        -1.550602781312836e-05
+      ]
+    }
+  ],
+  "correlations": [
+    {
+      "feature": "flow_rate_L_min",
+      "pearson_r": 0.03806969750493524,
+      "pearson_p": 0.643705633028472,
+      "spearman_r": 0.11141791459277421,
+      "spearman_p": 0.17465409237065685,
+      "kendall_tau": 0.08489904358698454,
+      "kendall_p": 0.13189884362862725,
+      "mutual_info": 0.09372297626181281,
+      "distance_corr": 0.18888632801139976
+    },
+    {
+      "feature": "concentration_mol_L",
+      "pearson_r": 0.00867349497072358,
+      "pearson_p": 0.9161048217071439,
+      "spearman_r": 0.03985319889804357,
+      "spearman_p": 0.628237357430927,
+      "kendall_tau": 0.028277412369712703,
+      "kendall_p": 0.6162670950095936,
+      "mutual_info": 0.0,
+      "distance_corr": 0.06815928486649553
+    },
+    {
+      "feature": "inlet_temperature_K",
+      "pearson_r": -0.40514548389116284,
+      "pearson_p": 2.707451180465473e-07,
+      "spearman_r": -0.3777489927995213,
+      "spearman_p": 1.8835322717100757e-06,
+      "kendall_tau": -0.23816807288428302,
+      "kendall_p": 2.3701717501403383e-05,
+      "mutual_info": 0.1917782574570981,
+      "distance_corr": 0.44638224647174973
+    },
+    {
+      "feature": "length_m",
+      "pearson_r": 0.07998512638118144,
+      "pearson_p": 0.3305638601910169,
+      "spearman_r": 0.013066097924782645,
+      "spearman_p": 0.873909618005933,
+      "kendall_tau": 0.012829434613870606,
+      "kendall_p": 0.819928278480025,
+      "mutual_info": 0.09590638336474555,
+      "distance_corr": 0.13399833504090045
+    },
+    {
+      "feature": "jacket_temperature_K",
+      "pearson_r": -0.4983839868184384,
+      "pearson_p": 8.585040273582739e-11,
+      "spearman_r": -0.5948474880702489,
+      "spearman_p": 1.0035108656541389e-15,
+      "kendall_tau": -0.4182200712350151,
+      "kendall_p": 1.1543567454626976e-13,
+      "mutual_info": 0.18922268865204162,
+      "distance_corr": 0.5019122873352108
+    },
+    {
+      "feature": "residence_proxy",
+      "pearson_r": 0.07642422613576065,
+      "pearson_p": 0.3526134360764436,
+      "spearman_r": -0.07893543268624022,
+      "spearman_p": 0.3369699229741987,
+      "kendall_tau": -0.032204826593031685,
+      "kendall_p": 0.567629605140839,
+      "mutual_info": 0.3392091950852425,
+      "distance_corr": 0.2121841243848006
+    },
+    {
+      "feature": "delta_T_jacket_inlet",
+      "pearson_r": -0.12920328153127622,
+      "pearson_p": 0.11507529401831373,
+      "spearman_r": -0.24029941263351168,
+      "spearman_p": 0.0030568635023125908,
+      "kendall_tau": -0.16065502320477984,
+      "kendall_p": 0.004355741340056949,
+      "mutual_info": 0.10463812745210399,
+      "distance_corr": 0.19392489651725636
+    },
+    {
+      "feature": "avg_temp",
+      "pearson_r": -0.6367393989493578,
+      "pearson_p": 1.9888652464392343e-18,
+      "spearman_r": -0.7109777925081285,
+      "spearman_p": 2.1400535695201246e-24,
+      "kendall_tau": -0.5166613870899267,
+      "kendall_p": 4.760978365418121e-20,
+      "mutual_info": 0.4171278305867272,
+      "distance_corr": 0.6697427826707678
+    },
+    {
+      "feature": "severity_index",
+      "pearson_r": -0.19264106925395863,
+      "pearson_p": 0.01818690504672819,
+      "spearman_r": -0.2798737137546832,
+      "spearman_p": 0.0005230842908996813,
+      "kendall_tau": -0.1916602430765811,
+      "kendall_p": 0.0006703294505872097,
+      "mutual_info": 0.12242083358555211,
+      "distance_corr": 0.23966349823889949
+    },
+    {
+      "feature": "inv_inlet_temp",
+      "pearson_r": 0.3752792368400127,
+      "pearson_p": 2.2245301234665887e-06,
+      "spearman_r": 0.3777489927995213,
+      "spearman_p": 1.8835322717100757e-06,
+      "kendall_tau": 0.23816807288428302,
+      "kendall_p": 2.3701717501403383e-05,
+      "mutual_info": 0.20069517974278073,
+      "distance_corr": 0.4253541036929365
+    }
+  ],
+  "feature_collinearity_spearman": {
+    "flow_rate_L_min": {
+      "flow_rate_L_min": 1.0,
+      "concentration_mol_L": 0.03,
+      "inlet_temperature_K": -0.137,
+      "length_m": -0.017,
+      "jacket_temperature_K": -0.035
+    },
+    "concentration_mol_L": {
+      "flow_rate_L_min": 0.03,
+      "concentration_mol_L": 1.0,
+      "inlet_temperature_K": -0.039,
+      "length_m": -0.083,
+      "jacket_temperature_K": 0.047
+    },
+    "inlet_temperature_K": {
+      "flow_rate_L_min": -0.137,
+      "concentration_mol_L": -0.039,
+      "inlet_temperature_K": 1.0,
+      "length_m": 0.01,
+      "jacket_temperature_K": 0.002
+    },
+    "length_m": {
+      "flow_rate_L_min": -0.017,
+      "concentration_mol_L": -0.083,
+      "inlet_temperature_K": 0.01,
+      "length_m": 1.0,
+      "jacket_temperature_K": -0.03
+    },
+    "jacket_temperature_K": {
+      "flow_rate_L_min": -0.035,
+      "concentration_mol_L": 0.047,
+      "inlet_temperature_K": 0.002,
+      "length_m": -0.03,
+      "jacket_temperature_K": 1.0
+    }
+  },
+  "outliers_iqr": [
+    {
+      "dataset": "train",
+      "feature": "flow_rate_L_min",
+      "n_outliers_iqr": 0,
+      "lower": -39.05999999999999,
+      "upper": 121.39999999999999
+    },
+    {
+      "dataset": "train",
+      "feature": "concentration_mol_L",
+      "n_outliers_iqr": 0,
+      "lower": -1.3262499999999997,
+      "upper": 5.84375
+    },
+    {
+      "dataset": "train",
+      "feature": "inlet_temperature_K",
+      "n_outliers_iqr": 0,
+      "lower": 273.67875000000004,
+      "upper": 576.5487499999999
+    },
+    {
+      "dataset": "train",
+      "feature": "length_m",
+      "n_outliers_iqr": 0,
+      "lower": -10.958749999999998,
+      "upper": 39.67125
+    },
+    {
+      "dataset": "train",
+      "feature": "jacket_temperature_K",
+      "n_outliers_iqr": 0,
+      "lower": 254.04874999999996,
+      "upper": 625.45875
+    },
+    {
+      "dataset": "test",
+      "feature": "flow_rate_L_min",
+      "n_outliers_iqr": 0,
+      "lower": -31.9,
+      "upper": 115.14
+    },
+    {
+      "dataset": "test",
+      "feature": "concentration_mol_L",
+      "n_outliers_iqr": 0,
+      "lower": -1.18,
+      "upper": 5.279999999999999
+    },
+    {
+      "dataset": "test",
+      "feature": "inlet_temperature_K",
+      "n_outliers_iqr": 0,
+      "lower": 297.7125,
+      "upper": 557.9525
+    },
+    {
+      "dataset": "test",
+      "feature": "length_m",
+      "n_outliers_iqr": 0,
+      "lower": -10.390000000000002,
+      "upper": 39.050000000000004
+    },
+    {
+      "dataset": "test",
+      "feature": "jacket_temperature_K",
+      "n_outliers_iqr": 0,
+      "lower": 289.66874999999993,
+      "upper": 619.57875
+    }
+  ]
+}

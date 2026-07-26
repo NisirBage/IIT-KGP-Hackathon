@@ -1,0 +1,122 @@
+[
+  {
+    "feature": "flow_rate_L_min",
+    "skewness": 0.142,
+    "kurtosis_excess": -1.262,
+    "min": 5.41,
+    "max": 79.02,
+    "std": 22.24,
+    "n_outliers_iqr": 0,
+    "strictly_positive": true,
+    "has_zero_or_negative": false,
+    "n_missing": 0
+  },
+  {
+    "feature": "concentration_mol_L",
+    "skewness": -0.138,
+    "kurtosis_excess": -1.222,
+    "min": 0.52,
+    "max": 3.97,
+    "std": 1.02,
+    "n_outliers_iqr": 0,
+    "strictly_positive": true,
+    "has_zero_or_negative": false,
+    "n_missing": 0
+  },
+  {
+    "feature": "inlet_temperature_K",
+    "skewness": -0.07,
+    "kurtosis_excess": -1.26,
+    "min": 351.63,
+    "max": 498.58,
+    "std": 45.201,
+    "n_outliers_iqr": 0,
+    "strictly_positive": true,
+    "has_zero_or_negative": false,
+    "n_missing": 0
+  },
+  {
+    "feature": "length_m",
+    "skewness": -0.07,
+    "kurtosis_excess": -1.219,
+    "min": 2.26,
+    "max": 24.99,
+    "std": 6.995,
+    "n_outliers_iqr": 0,
+    "strictly_positive": true,
+    "has_zero_or_negative": false,
+    "n_missing": 0
+  },
+  {
+    "feature": "jacket_temperature_K",
+    "skewness": 0.266,
+    "kurtosis_excess": -1.107,
+    "min": 354.01,
+    "max": 547.99,
+    "std": 55.048,
+    "n_outliers_iqr": 0,
+    "strictly_positive": true,
+    "has_zero_or_negative": false,
+    "n_missing": 0
+  },
+  {
+    "feature": "avg_temp",
+    "skewness": 0.218,
+    "kurtosis_excess": -0.716,
+    "min": 363.49,
+    "max": 516.16,
+    "std": 35.923,
+    "n_outliers_iqr": 0,
+    "strictly_positive": true,
+    "has_zero_or_negative": false,
+    "n_missing": 0
+  },
+  {
+    "feature": "residence_proxy",
+    "skewness": 2.77,
+    "kurtosis_excess": 11.081,
+    "min": 0.036,
+    "max": 4.494,
+    "std": 0.621,
+    "n_outliers_iqr": 15,
+    "strictly_positive": true,
+    "has_zero_or_negative": false,
+    "n_missing": 0
+  },
+  {
+    "feature": "residence_sq",
+    "skewness": 7.064,
+    "kurtosis_excess": 62.153,
+    "min": 0.001,
+    "max": 20.192,
+    "std": 1.982,
+    "n_outliers_iqr": 21,
+    "strictly_positive": true,
+    "has_zero_or_negative": false,
+    "n_missing": 0
+  },
+  {
+    "feature": "delta_T",
+    "skewness": 0.052,
+    "kurtosis_excess": -0.841,
+    "min": -128.05,
+    "max": 176.62,
+    "std": 70.603,
+    "n_outliers_iqr": 0,
+    "strictly_positive": false,
+    "has_zero_or_negative": true,
+    "n_missing": 0
+  },
+  {
+    "feature": "severity_index",
+    "skewness": 0.642,
+    "kurtosis_excess": 4.209,
+    "min": -165.295,
+    "max": 209.178,
+    "std": 48.617,
+    "n_outliers_iqr": 18,
+    "strictly_positive": false,
+    "has_zero_or_negative": true,
+    "n_missing": 0
+  }
+]

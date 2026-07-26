@@ -1,0 +1,12 @@
+{
+  "coefficients": {
+    "ExtraTrees": 1.397957900149038,
+    "CatBoost": 0.9280304324212792,
+    "RandomForest": -1.2109388439712547
+  },
+  "intercept": -5.294243278147178,
+  "clip_range": [
+    0,
+    100
+  ]
+}

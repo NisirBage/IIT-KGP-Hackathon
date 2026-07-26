@@ -1,0 +1,4 @@
+{
+  "model": "NGBoost",
+  "error": "This Pipeline instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator."
+}
