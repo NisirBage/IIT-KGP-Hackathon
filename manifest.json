@@ -1,6 +1,6 @@
 {
   "release_tag": "submission_v1",
-  "git_commit_hash": "0515615e40c1ffca13914a97cb0258dc344080db",
+  "git_commit_hash": "see 'git rev-parse submission_v1' -- this file is committed as part of the tagged commit itself, so its own hash cannot be embedded without a circular reference; the tag is the authoritative pointer",
   "git_branch": "master",
   "frozen_date": "2026-07-26",
   "python_version": "3.11.9",
