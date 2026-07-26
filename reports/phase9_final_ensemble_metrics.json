@@ -1,0 +1,9 @@
+{
+  "rmse_mean": 14.765320748463015,
+  "rmse_std": 0.6342716915407238,
+  "mae_mean": 9.112563274124904,
+  "mae_std": 0.4587758771695158,
+  "r2_mean": 0.8510951615355126,
+  "r2_std": 0.012614387545908528,
+  "protocol": "leave-one-repeat-out nested CV, 3-model clipped blend"
+}

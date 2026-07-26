@@ -1,0 +1,164 @@
+{
+  "repository": {
+    "repository_name": "reactor-yield-hackathon",
+    "git_branch": "master",
+    "final_commit_hash": "c761ccc714241483dc596a22063fbc9aac586917",
+    "release_tag": "submission_v1",
+    "release_tag_commit_hash": "c761ccc714241483dc596a22063fbc9aac586917",
+    "commit_timestamp": "2026-07-26T14:52:26+05:30",
+    "working_tree_clean_at_certificate_time": false
+  },
+  "environment": {
+    "python_version": "3.11.9",
+    "python_full_version_string": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "operating_system": "Windows",
+    "os_release": "10",
+    "os_version": "10.0.26200",
+    "architecture": "AMD64",
+    "platform_string": "Windows-10-10.0.26200-SP0",
+    "package_versions": {
+      "scikit-learn": "1.9.0",
+      "numpy": "2.4.6",
+      "pandas": "2.3.3",
+      "scipy": "1.17.1",
+      "catboost": "1.2.10",
+      "xgboost": "3.2.0",
+      "lightgbm": "4.7.0",
+      "optuna": "4.9.0",
+      "shap": "0.51.0",
+      "joblib": "1.5.3"
+    },
+    "requirements_frozen_sha256": "23b2d580e2fc4820a812dc875b13a0a5f2b321ce3f3206a01a109fe36e6dc7ee",
+    "random_seed": 42,
+    "random_seed_scope": "Used throughout for all CV splitters, Optuna samplers, bootstrap resampling, and every model's random_state parameter (see src/models/configs.py, src/optimization/configs.py)."
+  },
+  "final_model": {
+    "architecture": "LinearBlendEnsemble (src/models/ensemble.py)",
+    "base_models": {
+      "ExtraTrees": {
+        "feature_set": "core",
+        "scaler": "none",
+        "family": "Tree Ensemble",
+        "hyperparameters": "Phase 4 defaults (unmodified sklearn ExtraTreesRegressor defaults except n_estimators=300, random_state=42)"
+      },
+      "CatBoost": {
+        "feature_set": "core",
+        "scaler": "none",
+        "family": "Boosting",
+        "hyperparameters": {
+          "depth": 7,
+          "learning_rate": 0.010955620107346947,
+          "l2_leaf_reg": 1.5253101426924722,
+          "iterations": 1500,
+          "random_strength": 0.40046599104647107,
+          "bagging_temperature": 1.5336760668383298
+        }
+      },
+      "RandomForest": {
+        "feature_set": "core",
+        "scaler": "none",
+        "family": "Tree Ensemble",
+        "hyperparameters": {
+          "n_estimators": 400,
+          "max_depth": 12,
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "max_features": 0.5
+        }
+      }
+    },
+    "feature_configuration": {
+      "feature_set_name": "core",
+      "features": [
+        "flow_rate_L_min",
+        "concentration_mol_L",
+        "inlet_temperature_K",
+        "length_m",
+        "jacket_temperature_K",
+        "avg_temp",
+        "residence_proxy",
+        "residence_sq",
+        "delta_T",
+        "severity_index"
+      ],
+      "n_features": 10
+    },
+    "ensemble_weights": {
+      "ExtraTrees": 1.397957900149038,
+      "CatBoost": 0.9280304324212792,
+      "RandomForest": -1.2109388439712547
+    },
+    "ensemble_intercept": -5.294243278147178,
+    "clipping_policy": {
+      "lower_bound": 0.0,
+      "upper_bound": 100.0,
+      "rationale": "overall_yield is a physically bounded percentage; clipping was shown to improve, not just constrain, accuracy (LOO RMSE 14.974 unclipped -> 14.762 clipped)"
+    },
+    "serialized_artifact": {
+      "path": "artifacts/tuned_pipelines/FINAL_ENSEMBLE_blend_v1.joblib",
+      "size_bytes": 13106831,
+      "sha256": "67d5b7f6237ddc6daf6c8de5a8b8ee7746057b62fd7bd9d718b0b35672099e14"
+    }
+  },
+  "validation_protocol": {
+    "primary_reporting_protocol": "RepeatedKFold(n_splits=5, n_repeats=10, random_state=42)",
+    "n_folds_per_repeat": 5,
+    "n_repeats": 10,
+    "total_folds": 50,
+    "final_ensemble_protocol": "Leave-one-repeat-out nested cross-validation (10 iterations: train meta-model on 9 of 10 repeats' pooled out-of-fold predictions, evaluate on the 10th, repeated for all 10 choices)",
+    "hyperparameter_search_protocol": "RepeatedKFold(5,3) for ExtraTrees/RandomForest, RepeatedKFold(5,2) for CatBoost/GaussianProcess -- lighter than the final reporting protocol for search-efficiency; every selected configuration was independently re-validated under the full RepeatedKFold(5,10) protocol before being trusted",
+    "protocol_selection_justification": "reports/validation_strategy_report.md -- compared against Monte Carlo CV and Bootstrap validation; reseed-stability directly measured at std=0.24 RMSE across 20 reseeds",
+    "statistical_tests_performed": [
+      "Paired t-test (all major model/tuning/ensemble comparisons)",
+      "Wilcoxon signed-rank test (non-parametric confirmation of every paired t-test)",
+      "Bootstrap 95% confidence intervals (5000 resamples, on every paired comparison)",
+      "Friedman test (13-model omnibus comparison, chi2=530.2, p=8.2e-106)",
+      "Nemenyi post-hoc test (multiple-comparison-corrected pairwise model comparison)",
+      "Shapiro-Wilk (residual normality diagnostics)",
+      "Spearman correlation (heteroscedasticity diagnostics)",
+      "Kolmogorov-Smirnov test (train/test distribution shift)",
+      "Population Stability Index (train/test distribution shift, quantile-binned)"
+    ]
+  },
+  "final_performance": {
+    "final_ensemble": {
+      "rmse_mean": 14.765320748463015,
+      "rmse_std": 0.6342716915407238,
+      "mae_mean": 9.112563274124904,
+      "mae_std": 0.4587758771695158,
+      "r2_mean": 0.8510951615355126,
+      "r2_std": 0.012614387545908528,
+      "protocol": "leave-one-repeat-out nested CV, 3-model clipped blend"
+    },
+    "confidence_interval_vs_best_single_model": {
+      "comparison": "3-model clipped blend vs. ExtraTrees (best single model, Phase 4 baseline config)",
+      "mean_rmse_difference": -1.9305201260346103,
+      "paired_t_p_value": 1.4017699176518493e-11,
+      "wilcoxon_p_value": 0.001953125,
+      "bootstrap_95pct_ci": [
+        -2.0262740495793183,
+        -1.8467034480820161
+      ],
+      "ci_excludes_zero": true
+    },
+    "best_single_model_baseline": {
+      "model": "ExtraTrees (Phase 4 defaults)",
+      "rmse_mean": 16.692851528425482,
+      "mae_mean": 11.771902219999985,
+      "r2_mean": 0.7982725461740122,
+      "protocol": "RepeatedKFold(5,10)"
+    },
+    "dummy_regressor_baseline": {
+      "strategy": "mean",
+      "rmse_mean": 38.41082974010687,
+      "rmse_std": 2.5995005689397828,
+      "mae_mean": 35.57298957777778,
+      "mae_std": 2.940167202584951,
+      "r2_mean": -0.03135852547343029,
+      "r2_std": 0.045742886745810195,
+      "protocol": "RepeatedKFold(5,10)"
+    },
+    "percentage_improvement_over_dummy_baseline": 61.56,
+    "percentage_improvement_over_best_single_model": 11.55
+  }
+}

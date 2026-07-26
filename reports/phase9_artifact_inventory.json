@@ -1,0 +1,134 @@
+[
+  {
+    "filename": "submission/TeamName.csv",
+    "purpose": "Final submission CSV",
+    "size_bytes": 392,
+    "sha256": "01d734ea5b404fd60153c7f87050afc5cb886ac987171da4e18fd978a04b1390"
+  },
+  {
+    "filename": "artifacts/tuned_pipelines/FINAL_ENSEMBLE_blend_v1.joblib",
+    "purpose": "Final serialized ensemble model",
+    "size_bytes": 13106831,
+    "sha256": "67d5b7f6237ddc6daf6c8de5a8b8ee7746057b62fd7bd9d718b0b35672099e14"
+  },
+  {
+    "filename": "artifacts/tuned_pipelines/ExtraTrees_SELECTED_FINAL_v1.joblib",
+    "purpose": "ExtraTrees base pipeline (Phase 4 defaults)",
+    "size_bytes": 5514314,
+    "sha256": "b57235f543963a75657ebb0981c4ce114d6dd8b99033ef0f0090d5b724ae1cf9"
+  },
+  {
+    "filename": "artifacts/tuned_pipelines/CatBoost_tuned_v1.joblib",
+    "purpose": "CatBoost base pipeline (Phase 5 tuned)",
+    "size_bytes": 3197996,
+    "sha256": "2ec8ec5aa5c1a003821b803c125d53eccabf7b6322ddc00837aa50f6a63b3cc3"
+  },
+  {
+    "filename": "artifacts/tuned_pipelines/RandomForest_tuned_v1.joblib",
+    "purpose": "RandomForest base pipeline (Phase 5 tuned)",
+    "size_bytes": 4396106,
+    "sha256": "e2f866b0006fcfc0f781b2f1071002c7aaac41fd26b042f20f200cdedae46747"
+  },
+  {
+    "filename": "manifest.json",
+    "purpose": "Machine-readable freeze manifest",
+    "size_bytes": 4354,
+    "sha256": "a99fb069f694645421a64e689ab00b33bdf319a02b1080cb90f0ee2073a9df23"
+  },
+  {
+    "filename": "notebooks/competition_notebook.ipynb",
+    "purpose": "Executed competition notebook",
+    "size_bytes": 19151,
+    "sha256": "f5ff98d3ce3e58c56e3a496ac8c25c709f9b3e6f5fd7be740aafc104076f9f7e"
+  },
+  {
+    "filename": "reports/experiment_registry.md",
+    "purpose": "Full experiment log (EXP-000 to EXP-023)",
+    "size_bytes": 25865,
+    "sha256": "7f843c5529ef8a41878a4f649a28846c8859c2397fff7f75691ee3d42b5bb95e"
+  },
+  {
+    "filename": "reports/feature_registry.md",
+    "purpose": "Feature validation registry",
+    "size_bytes": 10451,
+    "sha256": "6fb46c94e9f19dd90c4e5e00c31057a16c35cf4a1d7f5e8a740adb42b4fbfddd"
+  },
+  {
+    "filename": "reports/preprocessing_registry.md",
+    "purpose": "Preprocessing decision registry",
+    "size_bytes": 5809,
+    "sha256": "87cbd0e525825dbe90a2fc976c76dcb3cc6e4832d9b7deb27db1254468b93b8b"
+  },
+  {
+    "filename": "reports/final_independent_audit.md",
+    "purpose": "Phase 9 adversarial audit",
+    "size_bytes": 23551,
+    "sha256": "94475c22956394c30e076d8f87ee17f3a018979f3f531d72eda297bc30649732"
+  },
+  {
+    "filename": "reports/technical_defense.md",
+    "purpose": "Phase 8 technical defense",
+    "size_bytes": 49976,
+    "sha256": "5be059aec183125922bbc67cf92c799b8af6d214333e479e09f7a25347366972"
+  },
+  {
+    "filename": "artifacts/optuna_studies/ExtraTrees.db",
+    "purpose": "ExtraTrees Optuna study",
+    "size_bytes": 229376,
+    "sha256": "24f38a814980c437127bba8d90ee26db3ef28d101d1c271d9e285c787bb189e5"
+  },
+  {
+    "filename": "artifacts/optuna_studies/CatBoost.db",
+    "purpose": "CatBoost Optuna study",
+    "size_bytes": 200704,
+    "sha256": "c5f321aeb2a7e90dbea99214a0c7dd3dd3a28914d4c4996263a99c47d46ea387"
+  },
+  {
+    "filename": "artifacts/optuna_studies/RandomForest.db",
+    "purpose": "RandomForest Optuna study",
+    "size_bytes": 225280,
+    "sha256": "25567193a33c6ae8bee3f29d0034c97e6a365fd0293542697ac41cc989704cfa"
+  },
+  {
+    "filename": "artifacts/optuna_studies/GaussianProcess.db",
+    "purpose": "GaussianProcess Optuna study",
+    "size_bytes": 139264,
+    "sha256": "486a9706c6df6528d4d14adc6397000fb6b10c9798f5d2199f38305ba8544a7f"
+  },
+  {
+    "filename": "data/raw/train_dataset.csv",
+    "purpose": "Original training data (150 rows)",
+    "size_bytes": 5510,
+    "sha256": "b8b499bebf0f0edfabe3514ea6eb779695de66045c93227bd5b88ccecee84f65"
+  },
+  {
+    "filename": "data/raw/test_dataset.csv",
+    "purpose": "Original test data (50 rows)",
+    "size_bytes": 1594,
+    "sha256": "2a0b9f57a5c0e8e106167157df9f9cc2323f9912842149b3314f9015a3b79be3"
+  },
+  {
+    "filename": "requirements_frozen.txt",
+    "purpose": "Pinned package versions",
+    "size_bytes": 1946,
+    "sha256": "23b2d580e2fc4820a812dc875b13a0a5f2b321ce3f3206a01a109fe36e6dc7ee"
+  },
+  {
+    "filename": "src/inference/submission.py",
+    "purpose": "Submission-writing code (Phase 9 bugfix)",
+    "size_bytes": 1327,
+    "sha256": "9e63bd00bb1b32c4c13607ef5a95bf54eb8d1e9ad46d25e0ab3ea29d2da624e1"
+  },
+  {
+    "filename": "src/inference/validator.py",
+    "purpose": "Validation code (Phase 9 bugfix)",
+    "size_bytes": 7552,
+    "sha256": "0774bfd0d2c5e67e10c4b8d51abdfc0b8c11d4ee7520c75420c591f797ca1bea"
+  },
+  {
+    "filename": "src/models/ensemble.py",
+    "purpose": "LinearBlendEnsemble class definition",
+    "size_bytes": 1730,
+    "sha256": "bc7dba049e66fed95bb265af9207dd9a7be5f812426096392af249b7fc4be35f"
+  }
+]
