@@ -164,12 +164,17 @@
         "check": "float_values",
         "passed": true,
         "detail": "dtype=float64"
+      },
+      {
+        "check": "at_least_3_decimal_places",
+        "passed": true,
+        "detail": "0/50 rows display fewer than 3 decimal digits, e.g. []"
       }
     ],
     "passed": true
   },
   "output_path": "C:\\Users\\BIT\\reactor-yield-hackathon\\submission\\TeamName.csv",
-  "output_sha256": "547521f4b9a249a6650927164433ca6d5e27f5a8684297fa69897a499d1c1c94",
+  "output_sha256": "01d734ea5b404fd60153c7f87050afc5cb886ac987171da4e18fd978a04b1390",
   "predictions": [
     24.688716839260593,
     82.5888213448823,

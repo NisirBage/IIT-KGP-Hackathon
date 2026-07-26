@@ -60,9 +60,10 @@
   "artifact_hashes_file": "reports/phase7_artifact_hashes.json",
   "submission_file": {
     "path": "submission/TeamName.csv",
-    "sha256": "547521f4b9a249a6650927164433ca6d5e27f5a8684297fa69897a499d1c1c94",
+    "sha256": "01d734ea5b404fd60153c7f87050afc5cb886ac987171da4e18fd978a04b1390",
     "n_rows": 50,
-    "columns": ["overall_yield"]
+    "columns": ["overall_yield"],
+    "note": "Hash updated in Phase 9 after fixing a decimal-format compliance bug (see reports/final_independent_audit.md) -- values now always display exactly 3 decimal places (e.g. '0.000' not '0.0')."
   },
   "phase_reports_index": [
     "reports/phase0_problem_understanding.md",

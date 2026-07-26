@@ -133,6 +133,17 @@ def validate_submission_file(path, expected_rows: int = config.EXPECTED_ROW_COUN
     else:
         check("float_values", False, f"column '{config.TARGET_COLUMN}' not present, cannot check dtype")
 
+    # Literal string-level decimal-place check -- np.round()/dtype checks alone cannot catch
+    # this: pandas' default CSV writer drops trailing zeros (0.000 -> "0.0"), which rounds
+    # correctly as a *number* but does not literally display "at least 3 decimal places" as
+    # the competition spec requires. Found via the Phase 9 adversarial audit (25/50 rows
+    # originally failed this). Checked directly against the raw file text, not the parsed
+    # DataFrame, since pandas re-parses "0.0" back into a perfectly normal float64.
+    raw_lines = raw_bytes.decode("utf-8").strip().splitlines()[1:]  # skip header
+    under_3dp = [line for line in raw_lines if len(line.split(".")[-1]) < 3]
+    check("at_least_3_decimal_places", len(under_3dp) == 0,
+          f"{len(under_3dp)}/{len(raw_lines)} rows display fewer than 3 decimal digits, e.g. {under_3dp[:3]}")
+
     if not report["passed"]:
         failed = [c["check"] for c in report["checks"] if not c["passed"]]
         raise ValidationError(f"Submission file validation failed: {failed}")
