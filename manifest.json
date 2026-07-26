@@ -1,0 +1,97 @@
+{
+  "release_tag": "submission_v1",
+  "git_commit_hash": "0515615e40c1ffca13914a97cb0258dc344080db",
+  "git_branch": "master",
+  "frozen_date": "2026-07-26",
+  "python_version": "3.11.9",
+  "package_versions": {
+    "scikit-learn": "1.9.0",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "catboost": "1.2.10",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.7.0",
+    "optuna": "4.9.0",
+    "shap": "0.51.0",
+    "joblib": "1.5.3"
+  },
+  "full_requirements_file": "requirements_frozen.txt",
+  "random_seeds": {
+    "global_rng_seed": 42,
+    "note": "All CV splitters, Optuna samplers, bootstrap resampling, and model random_state parameters use seed=42 throughout the project (see src/models/configs.py, src/optimization/configs.py, src/preprocessing/config.py)"
+  },
+  "validation_protocol": {
+    "final_reporting": "RepeatedKFold(n_splits=5, n_repeats=10, random_state=42)",
+    "optuna_objective": "RepeatedKFold(5,3) for ExtraTrees/RandomForest, RepeatedKFold(5,2) for CatBoost/GaussianProcess",
+    "justification": "reports/validation_strategy_report.md"
+  },
+  "feature_set": {
+    "registry_version": "reports/feature_registry.md (as of submission_v1 commit)",
+    "core_features": [
+      "flow_rate_L_min", "concentration_mol_L", "inlet_temperature_K", "length_m", "jacket_temperature_K",
+      "avg_temp", "residence_proxy", "residence_sq", "delta_T", "severity_index"
+    ]
+  },
+  "preprocessing_config": {
+    "registry_version": "reports/preprocessing_registry.md (as of submission_v1 commit)",
+    "per_model_scaling": {
+      "ExtraTrees": "none",
+      "CatBoost": "none",
+      "RandomForest": "none",
+      "GaussianProcess": "power_yeojohnson"
+    }
+  },
+  "final_model": {
+    "architecture": "LinearBlendEnsemble (src/models/ensemble.py)",
+    "base_models": ["ExtraTrees (Phase 4 defaults)", "CatBoost (Phase 5 tuned)", "RandomForest (Phase 5 tuned)"],
+    "meta_combination": "fixed linear coefficients, fit out-of-fold (Phase 6)",
+    "coefficients": {
+      "ExtraTrees": 1.397957900149038,
+      "CatBoost": 0.9280304324212792,
+      "RandomForest": -1.2109388439712547
+    },
+    "intercept": -5.294243278147178,
+    "output_clip_range": [0.0, 100.0],
+    "artifact_path": "artifacts/tuned_pipelines/FINAL_ENSEMBLE_blend_v1.joblib",
+    "selection_report": "reports/final_submission_recommendation.md",
+    "validated_rmse": {"mean": 14.762, "std": 0.642, "protocol": "leave-one-repeat-out nested CV, reports/ensemble_evaluation_report.md"}
+  },
+  "artifact_hashes_file": "reports/phase7_artifact_hashes.json",
+  "submission_file": {
+    "path": "submission/TeamName.csv",
+    "sha256": "547521f4b9a249a6650927164433ca6d5e27f5a8684297fa69897a499d1c1c94",
+    "n_rows": 50,
+    "columns": ["overall_yield"]
+  },
+  "phase_reports_index": [
+    "reports/phase0_problem_understanding.md",
+    "reports/dataset_passport.md",
+    "reports/phase1_eda_findings.md",
+    "reports/phase2_feature_engineering_report.md",
+    "reports/feature_registry.md",
+    "reports/redundancy_report.md",
+    "reports/stability_report.md",
+    "reports/feature_benchmark_report.md",
+    "reports/preprocessing_report.md",
+    "reports/preprocessing_registry.md",
+    "reports/leakage_validation_report.md",
+    "reports/pipeline_benchmark_report.md",
+    "reports/baseline_model_report.md",
+    "reports/model_comparison_report.md",
+    "reports/residual_analysis_report.md",
+    "reports/learning_curve_report.md",
+    "reports/validation_strategy_report.md",
+    "reports/hyperparameter_optimization_report.md",
+    "reports/optimization_diagnostics_report.md",
+    "reports/final_model_selection_report.md",
+    "reports/ensemble_evaluation_report.md",
+    "reports/final_submission_recommendation.md",
+    "reports/experiment_registry.md",
+    "reports/submission_pipeline_report.md",
+    "reports/reproducibility_report.md",
+    "reports/artifact_manifest.md",
+    "reports/submission_validation_report.md",
+    "reports/competition_readiness_report.md"
+  ]
+}
